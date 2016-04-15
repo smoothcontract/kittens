@@ -17,4 +17,14 @@ class Woman
     end
   end
 
+  def right
+    self.direction = case direction
+    when :north then :east
+    when :east then :south
+    when :south then :west
+    when :west then :north
+    else direction
+    end
+  end
+
 end
