@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Woman' do
-  describe '.init' do
+  describe '.initialize' do
     subject { Woman.new }
 
     it 'sets starting x position to 0' do
