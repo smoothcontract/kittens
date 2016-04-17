@@ -23,9 +23,19 @@ class Compass
     rotate CLOCKWISE
   end
 
+  def delta_x
+    X_DELTAS[@direction]
+  end
+
+  def delta_y
+    Y_DELTAS[@direction]
+  end
+
   private
 
   DIRECTIONS = %i(north east south west)
+  X_DELTAS = [0, 1, 0, -1]
+  Y_DELTAS = [1, 0, -1, 0]
   CLOCKWISE = 1
   ANTICLOCKWISE = -1
 

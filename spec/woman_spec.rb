@@ -17,4 +17,55 @@ describe 'Woman' do
     end
   end
 
+  describe '#forward' do
+    subject { Woman.new(direction: direction).forward }
+
+    context 'when facing north' do
+      let(:direction) { :north }
+
+      it 'increments y position' do
+        expect(subject.y_position).to eq 1
+      end
+
+      it 'keeps x position' do
+        expect(subject.x_position).to eq 0
+      end
+    end
+
+    context 'when facing east' do
+      let(:direction) { :east }
+
+      it 'increments x position' do
+        expect(subject.x_position).to eq 1
+      end
+
+      it 'keeps y position' do
+        expect(subject.y_position).to eq 0
+      end
+    end
+
+    context 'when facing south' do
+      let(:direction) { :south }
+
+      it 'decrements y position' do
+        expect(subject.y_position).to eq -1
+      end
+
+      it 'keeps x position' do
+        expect(subject.x_position).to eq 0
+      end
+    end
+
+    context 'when facing west' do
+      let(:direction) { :west }
+
+      it 'decrements x position' do
+        expect(subject.x_position).to eq -1
+      end
+
+      it 'keeps y position' do
+        expect(subject.y_position).to eq 0
+      end
+    end
+  end
 end
