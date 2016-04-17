@@ -1,30 +1,26 @@
 class Woman
-  attr_accessor :x_position, :y_position, :direction
+  attr_accessor :x_position, :y_position
 
   def initialize
-    self.x_position = 0
-    self.y_position = 0
-    self.direction = :north
+    @compass = Compass.new
+    @x_position = 0
+    @y_position = 0
+  end
+
+  def direction
+    @compass.direction
+  end
+
+  def direction=(direction)
+    @compass.direction = direction
   end
 
   def left
-    self.direction = case direction
-    when :north then :west
-    when :west then :south
-    when :south then :east
-    when :east then :north
-    else direction
-    end
+    @compass.left
   end
 
   def right
-    self.direction = case direction
-    when :north then :east
-    when :east then :south
-    when :south then :west
-    when :west then :north
-    else direction
-    end
+    @compass.right
   end
 
 end
