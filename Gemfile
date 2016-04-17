@@ -8,6 +8,7 @@ gem 'json'
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
+  gem 'rubocop'
 end
 
 group :test do

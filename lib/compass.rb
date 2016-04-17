@@ -1,5 +1,6 @@
+# Compass logic for rotating left, right and calculating x & y delta
+# when moving forward.
 class Compass
-
   def initialize
     @direction = 0
   end
@@ -43,5 +44,4 @@ class Compass
     @direction = (@direction + increment) % DIRECTIONS.length
     direction
   end
-
 end

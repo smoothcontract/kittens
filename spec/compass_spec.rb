@@ -13,9 +13,9 @@ describe 'Compass' do
     subject { Compass.new }
 
     it 'throws exception when setting an unknown direction' do
-      expect {
+      expect do
         subject.direction = :foo
-      }.to raise_error(Errors::InvalidDirection)
+      end.to raise_error(Errors::InvalidDirection)
     end
   end
 

@@ -1,3 +1,4 @@
+# Tracks position and orientation of witch when moving
 class Woman
   attr_accessor :x_position, :y_position
 
@@ -29,5 +30,4 @@ class Woman
     @y_position += @compass.delta_y
     self
   end
-
 end

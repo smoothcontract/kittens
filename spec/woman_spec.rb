@@ -48,7 +48,7 @@ describe 'Woman' do
       let(:direction) { :south }
 
       it 'decrements y position' do
-        expect(subject.y_position).to eq -1
+        expect(subject.y_position).to eq(-1)
       end
 
       it 'keeps x position' do
@@ -60,7 +60,7 @@ describe 'Woman' do
       let(:direction) { :west }
 
       it 'decrements x position' do
-        expect(subject.x_position).to eq -1
+        expect(subject.x_position).to eq(-1)
       end
 
       it 'keeps y position' do
