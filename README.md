@@ -8,25 +8,33 @@ For further info see: http://which-technical-exercise.herokuapp.com
 
 * Install dependencies:
 
+  ```
   $ bundle install
+  ```
 
 * Set the environment variable `EMAIL` to be your own email address e.g.
 
+  ```
   $ export EMAIL="myemail@mydomain.com"
+  ```
 
 
 ## Usage
 
 Conduct kitten investigation by running:
 
+  ```
   $ bin/kittens
+  ```
 
 
 ## Testing
 
 Unit tests are implemented with RSpec:
 
+  ```
   $ bundle exec rspec
+  ```
 
 
 ## Contributing
