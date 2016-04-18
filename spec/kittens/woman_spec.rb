@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe 'Woman' do
+describe Kittens::Woman do
   describe '.initialize' do
-    subject { Woman.new }
+    subject { described_class.new }
 
     it 'sets starting x position to 0' do
       expect(subject.x_position).to eq 0
@@ -18,7 +18,7 @@ describe 'Woman' do
   end
 
   describe '#forward' do
-    subject { Woman.new(direction: direction).forward }
+    subject { described_class.new(direction: direction).forward }
 
     context 'when facing north' do
       let(:direction) { :north }

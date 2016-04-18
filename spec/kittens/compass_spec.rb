@@ -1,26 +1,18 @@
 require 'spec_helper'
 
-describe 'Compass' do
-  describe '.initialize' do
-    subject { Compass.new }
-
-    it 'sets starting direction to north' do
-      expect(subject.direction).to eq :north
-    end
-  end
-
+describe Kittens::Compass do
   describe '#direction' do
-    subject { Compass.new }
+    subject { described_class.new }
 
     it 'throws exception when setting an unknown direction' do
       expect do
         subject.direction = :foo
-      end.to raise_error(Errors::InvalidDirection)
+      end.to raise_error(Kittens::Errors::InvalidDirection)
     end
   end
 
   describe '#left' do
-    let(:compass) { Compass.new }
+    let(:compass) { described_class.new }
     subject { compass.left }
 
     it 'rotates from north to west' do
@@ -45,7 +37,7 @@ describe 'Compass' do
   end
 
   describe '#right' do
-    let(:compass) { Compass.new }
+    let(:compass) { described_class.new }
     subject { compass.right }
 
     it 'rotates from north to east' do

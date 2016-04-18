@@ -1,4 +1,4 @@
 require 'simplecov'
 SimpleCov.start
 
-require_relative '../kittens'
+require 'kittens'
