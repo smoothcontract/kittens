@@ -68,4 +68,30 @@ describe Kittens::Woman do
       end
     end
   end
+
+  describe '#move' do
+    subject { described_class.new }
+
+    it 'allows forward movement' do
+      subject.move(:forward)
+      expect(subject.x_position).to eq(0)
+      expect(subject.y_position).to eq(1)
+    end
+
+    it 'allows rotation left' do
+      subject.move(:left)
+      expect(subject.direction).to eq(:west)
+    end
+
+    it 'allows rotation right' do
+      subject.move(:right)
+      expect(subject.direction).to eq(:east)
+    end
+
+    it 'throws exception for unknown movement' do
+      expect do
+        subject.move('down')
+      end.to raise_error(Kittens::Errors::InvalidDirection)
+    end
+  end
 end

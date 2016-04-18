@@ -31,5 +31,13 @@ module Kittens
       @y_position += @compass.delta_y
       self
     end
+
+    def move(direction)
+      if %w(left right forward).include?(direction.to_s)
+        send(direction)
+      else
+        fail Errors::InvalidDirection
+      end
+    end
   end
 end
