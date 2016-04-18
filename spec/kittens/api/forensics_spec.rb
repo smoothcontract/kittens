@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Kittens::Api::Forensics do
+  include_context 'api tests'
+
   describe '.directions' do
-    let(:domain) { 'https://which-technical-exercise.herokuapp.com' }
-    let(:email) { ENV['EMAIL'] }
     let(:url) { "#{domain}/api/#{email}/directions" }
     let(:body) do
       '{"directions":["forward","right","forward","left","forward"]}'

@@ -18,3 +18,4 @@ module Kittens
 end
 
 require_relative 'api/forensics'
+require_relative 'api/location'
