@@ -35,7 +35,10 @@ describe Kittens::Api::Location do
 
     context 'with server error' do
       before do
-        stub_request(:get, url).to_return(status: 500, body: '{"error":"something"}')
+        stub_request(:get, url).to_return(
+          status: 500,
+          body: '{"error":"something"}'
+        )
       end
 
       it 'throws exception' do
